@@ -1,0 +1,87 @@
+.team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: #F5F4FA;
+
+    & .card {
+      background: #FFFFFF;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 0px 0px 4px 4px;
+    }
+
+    & img {
+      margin-bottom: 30px;
+    }
+  }
+  
+  .team-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.167;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $main-title-color;
+    margin-bottom: 50px;
+  }
+  
+  .team-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.188;
+    letter-spacing: 0.03em;
+    color: $main-title-color;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .team-position {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.188;
+    letter-spacing: 0.03em;
+    color: $main-descriprion-color;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  .teamcards {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin: 0px 32px 30px;
+
+    & .link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: #fff;
+      transition: background-color $main-transition $cubic;
+    }
+
+    & li:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    & .link:hover, & .link:focus {
+      background-color: $accent-color;
+    }
+
+    & .link:hover .social-icon, & .link:focus .social-icon {
+      fill: #ffffff;
+    }
+
+  }
+  
+  .social-icon {
+    fill: $icon-color;
+    width: 20px;
+    height: 20px;
+    transition: fill $main-transition $cubic;
+  }

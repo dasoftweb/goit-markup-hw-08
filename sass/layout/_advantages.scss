@@ -1,0 +1,59 @@
+.advantages-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $main-title-color;
+    margin-bottom: 10px;
+  }
+  
+  .advantages-descriprion {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    color: $main-descriprion-color;
+    margin: 0;
+  }
+  
+  .advantages .list {
+    display: flex;
+    padding: 94px 0;
+  }
+  
+  .advantage-item {
+    width: 270px;
+  }
+  
+  .advantage-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  
+  .advantages-title::before {
+    content: "";
+    display: block;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .advantage-item:nth-child(1)>.advantages-title::before {
+    background-image: url('../images/icons/antenna.svg');
+  }
+  
+  .advantage-item:nth-child(2)>.advantages-title::before {
+    background-image: url('../images/icons/clock.svg');
+  }
+  
+  .advantage-item:nth-child(3)>.advantages-title::before {
+    background-image: url('../images/icons/diagram.svg');
+  }
+  
+  .advantage-item:nth-child(4)>.advantages-title::before {
+    background-image: url('../images/icons/astronaut.svg');
+  }

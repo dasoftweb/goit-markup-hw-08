@@ -1,0 +1,90 @@
+.header {
+    padding: 25px 0;
+    border-bottom: 1px solid #ececec;
+
+    & .container {
+      display: flex;
+      margin: 0 auto;
+      align-items: center;
+    }
+  }
+  
+  .navigation {
+    display: flex;
+    align-items: center;
+
+    & .list {
+      display: flex;
+    }
+  }
+  
+  .menu-item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+  
+  .address {
+    margin-left: auto;
+
+    & .list {
+      display: flex;
+    }
+
+    & .list-item {
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+  .list-item {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.02em;
+    color: $main-title-color;
+    font-style: normal;
+    transition: color $main-transition $cubic;
+
+    &:hover, 
+    &:focus, 
+    &:active {
+      color: $accent-color;
+    }
+  }
+  
+  .header-contacts {
+    color: $main-descriprion-color;
+  }
+  
+  .menu-icon {
+    fill: $main-descriprion-color;
+    margin-right: 10px;
+    max-height: 16px;
+    max-width: 16px;
+    transition: fill $main-transition $cubic;
+
+    .list-item:hover &, 
+    .list-item:focus & {
+      fill: $accent-color;
+    }
+  }
+
+  .current {
+    color: $accent-color;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 4px;
+      transform: translateY(800%);
+      background: $accent-color;
+      border-radius: 2px;
+    }
+  }

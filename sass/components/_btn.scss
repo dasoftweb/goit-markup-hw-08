@@ -1,0 +1,23 @@
+.main-btn {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    min-width: 200px;
+    height: 50px;
+    color: #ffffff;
+    background: $accent-color;
+    border-radius: 4px;
+    border-color: $accent-color;
+    cursor: pointer;
+
+    .subcribe-form &, .modalform & {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modalform & {
+        align-self: center;
+    }
+
+  }

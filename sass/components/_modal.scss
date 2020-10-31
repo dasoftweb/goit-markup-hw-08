@@ -1,0 +1,214 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all $main-transition $cubic;
+    overflow-y: scroll;
+
+    &.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: all $main-transition $cubic 500ms;
+    }
+
+    &.is-hidden .modal {
+      transform: translate(-50%, -50%) scale(0);
+      transition: all $main-transition $cubic;
+    }
+  }
+  
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 528px;
+    height: 581px;
+    background-color: #ffffff;
+    padding: 40px;
+    transition: all $main-transition $cubic 500ms;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .close-btn:hover .close-icon,
+  .close-btn:focus .close-icon {
+    fill: $accent-color;
+  }
+  
+  .close-icon {
+    width: 11px;
+    height: 11px;
+  }
+  
+  .modal__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+  }
+  
+  .modalform {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-form-wrapper {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .modalform__input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding-left: 42px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+    transition: all $main-transition $cubic;
+  }
+  
+  .modalform__label {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: $main-descriprion-color;
+  margin-bottom: 4px;
+  }
+  
+  .modalform__input-svg {
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      transition: all $main-transition $cubic;
+  }
+  
+  .modal-form-message {
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    transition: all $main-transition $cubic;
+    margin-bottom: 20px;
+    padding-top: 12px;
+    padding-left: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+  }
+  
+  .modal-form-message::placeholder {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+  
+  .modalform__input:focus,
+  .modalform__input:hover,
+  .modal-form-message:focus,
+  .modal-form-message:hover {
+    outline: none;
+    border-color: $accent-color;
+    cursor: pointer;
+  }
+  
+  .modalform__input:focus + .modalform__input-svg,
+  .modalform__input:hover + .modalform__input-svg {
+    fill: $accent-color;
+  }
+  
+  .modal-form-policy {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  
+  .modal-form-policy-label {
+    display: flex;
+    align-items: center;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+  
+    color: $main-descriprion-color;
+  }
+  
+  .modal-form-policy-label::before {
+    display: inline-block;
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 2px;
+    margin-right: 7px;
+    transition: background-color $main-transition $cubic,
+      background-image $main-transition $cubic,
+      border $main-transition $cubic;
+  }
+  
+  .modal-form-policy:checked + .modal-form-policy-label::before {
+    background-image: url("../images/icons/check.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: $accent-color;
+    border: 2px solid #2196f3;
+  }
+  
+  .modal-form-policy:focus + .modal-form-policy-label::before {
+    border: 2px solid #2196f3;
+  }
+  
+  .modal-form-policy-wparrer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .modal-form-policy-label a {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: $accent-color;
+  }
